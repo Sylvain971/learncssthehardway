@@ -1,7 +1,8 @@
 
 # Significative extracts from Michael Hartl tutorial "Learn Enough CSS and Layouts to be Dangerous"
 
-I decided to do the Learn Enough CSS and Layout to Be Dangerous Tutorial to improve myself on front-end development aspects. Here is my cheatsheet to remember the key principles I learned.
+*I decided to do the Learn Enough CSS and Layout to Be Dangerous Tutorial to improve myself on front-end development aspects. Here is my cheatsheet to remember the key principles I learned.*
+
 
 ## General principle 
 
@@ -15,11 +16,12 @@ In CSS, styling rules flow down from parents to children unless another style in
 ## Formatting advice
 
 ### Writting CSS
-CSS should be written in a separated file for a more mantainable website.
-Divide up the styling into two different categories : global styles that will apply in many different places in order to create greater consistency, and individual sections that are self-contained modules of functionality or content.
-Keep properties alphabetized, it will help find things much faster.
-Be consistent : if using dashes as separators, use them everywhere, don’t mix them with underscores or camelcase.
-
+* CSS should be written in a separated file for a more mantainable website.
+* Divide up the styling into two different categories : global styles that will apply in many different places in order to create greater consistency, and individual sections that are self-contained modules of functionality or content.
+* Group all styles that relate to the same part of the site in the same place, and to be extra helpful add in a comment or two that explains what the styles are for
+* Be consistent in the naming convention : if using dashes as separators, use them everywhere, don’t mix them with underscores or camelcase.
+* Keep the number of selectors in a declaration under three for a good readability and limit the work the browser has to do to render the page.
+* Keep properties alphabetized, it will help find things much faster.
 
 ### Naming classes and ids
 Think in terms of how something functions or what its intent is, and it’s usually best to be specific. Make reference to a specific kind of element on the page. The names should be based on what the intended purpose is of the element on the page and should be very descriptive.
