@@ -109,7 +109,7 @@ Use relative units for text, and simply pick random numbers that set the font si
 
 ### Inline vs block
 
-All of the elements that modify text, such as <strong> and <em>, are inline elements. Other common inline elements include links and (perhaps surprisingly) images.
+All of the elements that modify text, such as "strong" and "em", are inline elements. Other common inline elements include links and (perhaps surprisingly) images.
 Inline elements take up only as much width on the page as is necessary to contain the content inside the tags—you can think of inline elements as being shrink-wrapped around the content inside them.
 
 Block elements always start on a new line, as if there is a line break in front of them, so one of their main purposes is to divide the page’s text into different presentational groups, such as paragraphs or lists. Block elements bound the full width of the page, like an inflexible cardboard box.
