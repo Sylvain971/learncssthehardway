@@ -105,8 +105,37 @@ Using vh and vw for everything, the site would look bad on either mobile or desk
 The goal should always be to have readable text on the page. Nicely laid-out copy should be the equivalent of somewhere between 14px and 18px in height.
 Use relative units for text, and simply pick random numbers that set the font sizes somewhat close to what your design calls for.
 
+## Box model
 
+### Inline vs block
 
+All of the elements that modify text, such as <strong> and <em>, are inline elements. Other common inline elements include links and (perhaps surprisingly) images.
+Inline elements take up only as much width on the page as is necessary to contain the content inside the tags—you can think of inline elements as being shrink-wrapped around the content inside them.
 
+Block elements always start on a new line, as if there is a line break in front of them, so one of their main purposes is to divide the page’s text into different presentational groups, such as paragraphs or lists. Block elements bound the full width of the page, like an inflexible cardboard box.
 
+Inline elements are only allowed to have margins and padding applied to the left and right (not top or bottom), and they won’t accept a width or height set by CSS. None of these restrictions apply to block elements.
+Some styles can cause an inline element to switch to be a block element. Changing an element’s position on the page can also switch it from inline to block
+
+It is possible to directly force an element to change :
+* display: none prevents the element from displaying on the page.
+* display: block forces an element to be a block element regardless of what it was before.
+* display: inline turns a block element into an inline element. The element will no longer be on its own line, but rather will flow with text like any other inline element. 
+* display: inline-block is a hybrid between inline and block. It allows styling that normally works only on block elements—such as width and height, top margins, and padding—to be applied to a particular element. At the same time, it also lets the element as a whole act like an inline element. Inline-block declaration is especially helpful when making site navigation, or when styling a group of elements so that they are side by side.
+* display: flex is a powerful display property that forces all child elements to fill the entire parent element, and is highly customizable to allow for incredibly useful layout possibilities.
+
+### Margins, padding, and borders
+
+In the default state, CSS assumes that when you set a size for an element you are only talking about the content part of an element. Elements and their content are not the same thing.
+
+box-sizing: border-box property cause the browser to draw the borders and padding inside of the defined width.
+
+When elements aren’t block elements, the browser fully respected their set margins. When two block elements with margins follow each other, one of the top or bottom margins is canceled out.
+
+### Floats
+
+When you set an element to float to the left or right, all the inline content around it will flow around the floated element. Floated elements will always sit next to other floated elements on the same line, as long as there is horizontal room. If the elements are too wide, they will drop down to the next line.
+The problem is that the browser doesn’t always know where to end the float. The clear rule is used to let the browser know to end floats. If the floating elements had been floated to the right using float: right, you would need to clear their float status with clear: right, or  you can clear both types of floats using clear: both. A better way to clear floats is apply a rule to clear everything inside a wrapper with :
+* overflow: hidden but the if you also need to set a height or width on the element that has overflow: hidden set, the content inside can get cut off.
+* :after
 
