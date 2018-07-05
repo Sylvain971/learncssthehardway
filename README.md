@@ -136,6 +136,25 @@ When elements aren’t block elements, the browser fully respected their set mar
 
 When you set an element to float to the left or right, all the inline content around it will flow around the floated element. Floated elements will always sit next to other floated elements on the same line, as long as there is horizontal room. If the elements are too wide, they will drop down to the next line.
 The problem is that the browser doesn’t always know where to end the float. The clear rule is used to let the browser know to end floats. If the floating elements had been floated to the right using float: right, you would need to clear their float status with clear: right, or  you can clear both types of floats using clear: both. A better way to clear floats is apply a rule to clear everything inside a wrapper with :
-* overflow: hidden but the if you also need to set a height or width on the element that has overflow: hidden set, the content inside can get cut off.
-* :after
+* overflow: hidden : it makes the browser want to keep content contained entirely within the wrapper. If there is no set dimension on the wrapper, the browser just expands the boundaries of the wrapper to reach the end of the floated elements, and then lets the elements that follow display on the page normally. But the if you also need to set a height or width on the element that has overflow: hidden set, the content inside can get cut off.
+* :after (to be completed)
+
+### Overflow
+
+Overflow tells the browser how to handle content inside a wrapper, if that wrapper has a set height or width.
+* the content in the wrapper doesn’t fill the box : overflow does nothing
+* there is more content than room to display that content : visible shows everything, hidden cuts content off at boundaries of the wrapper, scroll adds scroll bars to permit to scroll up and down.
+
+### Inline block
+
+display: inline-block allows elements to keep their block-style formatting (so they can have height and top/bottom margin and padding), while also letting us do things like control an element’s position on a line of text by setting the style text-align on a wrapper to make everything align left, right, or center.
+
+### Margins
+
+ In the box model, margins always apply outside of an element. box-sizing style: border-box don't work. We need to reduce the size of each of the containers to get everything to fit.
+ A block element that has a width set by a style can be centered horizontally within its parent container by setting the left and right margin to margin: auto.
+ max-width and max-width  are useful when designing sites that are intended to look good on both mobile and on desktop.
+ Negative margins allow to extend some content up and out of a box and overlap that content into a space where it normally wouldn’t be able to be positioned, all while maintaining its properties as a normal block-level element.
+
+
 
